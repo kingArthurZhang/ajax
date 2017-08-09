@@ -46,7 +46,7 @@ $('.del').click(function(){
     id=this.id;
     obj=$(this);
 
-    $.get('delete.php',{id:id},function(r){
+    $.post('delete.php',{id:id},function(r){
         if(r=='1'){
             obj.parent().parent().hide(100);
         }
